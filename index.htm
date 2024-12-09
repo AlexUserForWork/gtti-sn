@@ -64,6 +64,52 @@
       </script>
       <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
       <link href="images/webclip.png" rel="apple-touch-icon" />
+      <style>
+         /* Apply on any element by adding class "animate-gradient" or attribute animate="gradient" */
+         /* You can set a gradient in the designer just as it is now, but we recommend NOT setting it on
+"animate-gradient" class. It's better to set it in on a different class and then add "animate-gradient" as a combo class or the attribute just to enable the animation. */
+         .animate-gradient,
+         [animate='gradient'] {
+            background-size: 1500% /* <-- modify gradient size */ auto;
+            animation: textGradient 16s /* <-- modify animation speed */ linear
+               infinite alternate;
+         }
+         @keyframes textGradient {
+            0% {
+               background-position: 0% 50%;
+            }
+            100% {
+               background-position: 100% 50%;
+            }
+         }
+      </style>
+      <style>
+         @keyframes scroll {
+            from {
+               transform: translateX(0);
+            }
+            to {
+               transform: translateX(calc(-100% - 1rem));
+            }
+         }
+         .scroll {
+            animation: scroll 10s linear infinite;
+         }
+         .reverse {
+            animation-direction: reverse;
+         }
+         .marquee-image {
+            -webkit-transform: translateZ(0);
+         }
+      </style>
+      <style>
+         @media (max-width: 768px) {
+            .main-text {
+               font-size: 100px !important;
+            }
+            
+         }
+      </style>
    </head>
    <body class="body-2">
       <div id="hero" class="overlay tophero v2"></div>
@@ -71,130 +117,8 @@
          data-w-id="95e5c0ac-4002-4019-f7c9-1c54bca5633e"
          style="display: block"
          class="preloader"
-      >
-         <!-- <div class="preloader-wrapper-2">
-            <div class="preloader-logo-wrapper-2">
-               <img
-                  style="
-                     -webkit-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                     -moz-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                     -ms-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                     transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  "
-                  data-w-id="95e5c0ac-4002-4019-f7c9-1c54bca56341"
-                  alt=""
-                  src="images/yetihead_-lofi_cutout_logo.png"
-                  loading="lazy"
-                  class="preloader-logo-2"
-               />
-            </div>
-         </div> -->
-         <!-- <div class="w-layout-grid preloader-component-grid">
-            <div
-               id="w-node-_95e5c0ac-4002-4019-f7c9-1c54bca56343-aff75e3c"
-               class="preloader-overflow"
-            >
-               <div
-                  id="w-node-_95e5c0ac-4002-4019-f7c9-1c54bca56344-aff75e3c"
-                  data-w-id="95e5c0ac-4002-4019-f7c9-1c54bca56344"
-                  style="
-                     -webkit-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                     -moz-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                     -ms-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                     transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  "
-                  class="top-preloader"
-               ></div>
-            </div>
-            <div
-               id="w-node-_95e5c0ac-4002-4019-f7c9-1c54bca56345-aff75e3c"
-               class="preloader-overflow"
-            >
-               <div
-                  id="w-node-_95e5c0ac-4002-4019-f7c9-1c54bca56346-aff75e3c"
-                  data-w-id="95e5c0ac-4002-4019-f7c9-1c54bca56346"
-                  style="
-                     -webkit-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                     -moz-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                     -ms-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                     transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  "
-                  class="bottom-preloader"
-               ></div>
-            </div>
-         </div> -->
-      </div>
+      ></div>
       <div class="div-block-23">
-         <!-- <div
-            data-collapse="medium"
-            data-animation="default"
-            data-duration="400"
-            bind="18638a64-158e-82a5-ef35-2151b27a4e25"
-            data-easing="ease"
-            data-easing2="ease"
-            role="banner"
-            class="navigation top w-nav"
-         >
-            <div class="navigation-wrap">
-               <a
-                  href="index.htm"
-                  aria-current="page"
-                  class="logo-link w-nav-brand w--current"
-                  ><img
-                     width="108"
-                     src="images/yetihead_-lofi_cutout_logo.png"
-                     alt=""
-                     class="logo-image"
-               /></a>
-               <a
-                  href="https://app.cetus.zone/swap?from=0x2::sui::SUI&to=0xf22da9a24ad027cccb5f2d496cbe91de953d363513db08a3a734d361c7c17503::LOFI::LOFI"
-                  target="_blank"
-                  class="button padbottommobile blue headerbutton animate-gradient w-inline-block"
-               >
-                  <div class="text-block-10">Buy Now</div>
-               </a>
-               <div class="menu">
-                  <nav role="navigation" class="navigation-items w-nav-menu">
-                     <a href="#HomeTopScroll" class="navigation-item w-nav-link"
-                        >Home</a
-                     >
-                     <a href="#AboutScroll" class="navigation-item w-nav-link"
-                        >About</a
-                     >
-                     <a
-                        href="#HowToBuyScroll"
-                        class="navigation-item w-nav-link"
-                        >How To Buy</a
-                     >
-                     <a
-                        href="#TokenomicsScroll"
-                        class="navigation-item w-nav-link"
-                        >Tokenomics</a
-                     >
-                  </nav>
-                  <div class="menu-button-2 w-nav-button">
-                     <img
-                        width="22"
-                        src="images/menu-icon_1menu-icon.png"
-                        alt=""
-                        class="menu-icon"
-                     />
-                  </div>
-               </div>
-            </div>
-         </div> -->
          <div
             data-collapse="medium"
             data-animation="default"
@@ -205,45 +129,7 @@
             role="banner"
             class="navigation w-nav"
          >
-            <div class="navigation-wrap">
-               <!-- <a
-                  href="index.htm"
-                  aria-current="page"
-                  class="logo-link w-nav-brand w--current"
-                  ><img
-                     width="108"
-                     src="images/yetihead_-lofi_cutout_logo.png"
-                     alt=""
-                     class="logo-image"
-               /></a> -->
-               <!-- <a
-                  href="https://app.cetus.zone/swap?from=0x2::sui::SUI&to=0xf22da9a24ad027cccb5f2d496cbe91de953d363513db08a3a734d361c7c17503::LOFI::LOFI"
-                  target="_blank"
-                  class="button padbottommobile blue headerbutton animate-gradient w-inline-block"
-               >
-                  <div class="text-block-10">Buy Now</div>
-               </a> -->
-               <!-- <div class="menu">
-                  <nav role="navigation" class="navigation-items w-nav-menu">
-                     <a href="#HomeTopScroll" class="navigation-item w-nav-link"
-                        >Home</a
-                     >
-                     <a href="#AboutScroll" class="navigation-item w-nav-link"
-                        >About</a
-                     >
-                     <a
-                        href="#HowToBuyScroll"
-                        class="navigation-item w-nav-link"
-                        >How To Buy</a
-                     >
-                     <a
-                        href="#TokenomicsScroll"
-                        class="navigation-item w-nav-link"
-                        >Tokenomics</a
-                     >
-                  </nav>
-               </div> -->
-            </div>
+            <div class="navigation-wrap"></div>
          </div>
       </div>
       <div id="HomeTopScroll" class="topherov2">
@@ -253,7 +139,7 @@
                class="preloader-wrapper v2 animate-gradient"
             >
                <div class="spaceholder">
-                  <h1 class="heading-6">GETTI</h1>
+                  <h1 class="heading-6 main-text">GETTI</h1>
                </div>
                <div class="preloader-logo-wrapper">
                   <img
